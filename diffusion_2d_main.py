@@ -21,7 +21,7 @@ fig, axes = plt.subplots(nrows=3, ncols=4)
 i = 0
 for ax in axes.flat:
     im = ax.imshow(u[:,:,round(i*(Nt-1)/11)],vmin=np.amin(u),vmax=np.amax(u),cmap='jet')
-    print np.amax(u[:,:,round(i*(Nt-1)/11)])-u[30,30,round(i*(Nt-1)/11)]
+    print np.amax(u[:,:,round(i*(Nt-1)/11)])-u[10,10,round(i*(Nt-1)/11)]
     i = i+1
     ax.axis('off')
     

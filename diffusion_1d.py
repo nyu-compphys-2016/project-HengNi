@@ -55,7 +55,7 @@ def heat_diffusion(X,T,Nx,Nt,D,q0):
         d_u = np.dot(B,u) + dt*q - dt*mu*((u-293.0)**4-293.0**4)
         u = TDMAsolver(a_u, b_u, c_u, d_u)
         u_tevol.append(u)
-        #plt.plot(x_grid,u,'b',alpha = float(ti)/Nt)
-        #fig.show()
+        plt.plot(x_grid,u,'b',alpha = float(ti)/Nt)
+        fig.show()
 
     return u_tevol
